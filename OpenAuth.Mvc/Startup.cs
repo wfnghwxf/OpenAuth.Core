@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -55,13 +52,9 @@ namespace OpenAuth.Mvc
             {
                 app.UseExceptionHandler("/Error");
             }
-
             app.UseStaticFiles();
             app.UseCookiePolicy();  
-
-            app.UseMvcWithDefaultRoute();
-
-            
+            app.UseMvcWithDefaultRoute();            
         }
     }
 }
